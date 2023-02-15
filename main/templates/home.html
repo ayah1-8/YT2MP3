@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Convert YouTube Video To MP3 Format</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f1f1f1;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      .bg {
+        background-color: #212121;
+        padding: 50px 0;
+        height: 100vh; /* Set the height to 100vh to fill the whole viewport */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .centered {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        margin-bottom: 30px;
+      }
+
+      .firstLine {
+        font-size: 60px;
+        font-weight: bold;
+        margin: 0;
+        letter-spacing: 10px;
+      }
+
+      .secondLine {
+        font-size: 24px;
+        margin: 0;
+      }
+
+      .InputStyle {
+        padding: 12px 20px;
+        border: none;
+        border-radius: 25px;
+        background-color: #fff;
+        box-shadow: 5px 4px 5px rgba(0, 0, 0, 0.1);
+        font-size: 16px;
+        width: 90%;
+        justify-content: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        outline: none;
+        text-align: center;
+      }
+
+      .submit-btn,
+      .file-btn {
+        padding: 12px 20px;
+        border: none;
+        border-radius: 25px;
+        background-color: #ff4500;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        margin: 5px;
+        outline: none;
+      }
+
+      .submit-btn:hover,
+      .file-btn:hover {
+        background-color: #ff8c00;
+      }
+
+      .social-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .social-btn a {
+        display: inline-block;
+        margin: 0 10px;
+        font-size: 30px;
+        color: #fff;
+        text-decoration: none;
+        transition: all 0.2s ease;
+      }
+
+      .social-btn a:hover {
+        color: #ff4500;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg text-center">
+      <!--Div for Centered Text & Input-->
+      <div class="centered">
+        <form action="#" method="post">
+          {% csrf_token %}
+          <p class="firstLine">M &nbsp; P &nbsp; 3 . &nbsp; M &nbsp; E</p>
+
+          <p class="secondLine">Convert YouTube Video To MP3 Format</p>
+
+          <input
+            class="InputStyle"
+            placeholder="Enter YouTube Video URL "
+            type="text"
+            name = "url"
+          />
+
+          <div>
+            <button class="file-btn">Choose File</button>
+            <button class="submit-btn" href= {% url 'home'%}>Submit</button>
+          </div>
+        </form>
+      </div>
+
+      <!--Div for bottom Icons-->
+      <div class="social-btn">
+        <a href="https://www.linkedin.com/in/ayah-karimeh/" title="LinkedIn"
+          ><i class="fa fa-linkedin"></i
+        ></a>
+        <a href="https://github.com/ayah1-8/" title="GitHub"
+          ><i class="fa fa-github"></i
+        ></a>
+      </div>
+    </div>
+  </body>
+</html>
